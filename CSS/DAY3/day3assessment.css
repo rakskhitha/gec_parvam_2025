@@ -1,0 +1,81 @@
+img{
+    max-width: 150px;
+    
+}
+h1{
+    text-align: left;
+    text-decoration: solid;
+}
+
+/* #on{
+    border: 2px solid black;
+    border-radius: 30%;
+    width: 90px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+} */
+
+
+ /* .mini{
+    position: relative;
+    display: inline-block;
+ } */
+.mini input{
+    width: 200px;
+    margin-right: 2px;
+    padding: 10px 30px ;
+    border-radius: 30px;
+    border: 2px solid black;
+  
+}
+
+.mini i{
+    position: absolute;
+    /* right: 300px;
+    top: 80px; */
+    /* /* bottom: 10px;  */
+    transform: translateY(50%);
+     cursor: pointer; 
+     left: 20px;
+}
+
+
+.max{
+    position: relative;
+    display: inline-block;
+}
+ select{
+    border: 2px solid black;
+    width: 200px;
+    border-radius: 30px;
+    text-align:center;
+    
+    /* margin-right: 350px; */
+    /* padding: 10px 10px; */
+}
+.max p{
+    
+    position: relative;
+left: 90px;
+}
+.max i{
+    position: absolute;
+    right: 0;
+    left: 70px;
+    bottom: 20px;
+}
+.bil{
+    bottom: 100px;
+}
+.fa-solid fa-magnifying-glass{
+    left: 150px;
+    right: 200px;
+    bottom: 150px;
+}
+.pp{
+    gap: 50px;
+    left: 500px;
+    right: 200%;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 70vw;
+            height: 80vh;
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav""main main aside""footer footer footer";
+          
+            column-gap: 20px;
+            row-gap: 20px;
+            padding: 20px;
+
+
+        }
+        .first{
+            grid-area:"nav";
+            grid-column: 1/span 3;
+
+        }
+        .sec{
+            grid-area:"main";
+            grid-column: 1/span 2;
+        }
+        .thi{
+            grid-area:"aside";
+        }
+        .four{
+            grid-area:"footer";
+            grid-column: 1/span 3;
+        }
+
+       .child{
+        border: 2px solid black;
+       }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="child first">1</div>
+        <div class="child sec">2</div>
+        <div class="child thi">3</div>
+        <div class="child four">4</div>
+       
+    </div>
+</body>
+
+</html>

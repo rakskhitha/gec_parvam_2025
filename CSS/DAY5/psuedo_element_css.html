@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            text-decoration: none;
+            margin-left: 20px;
+
+        }
+        .child:hover{
+            color: aquamarine;
+
+
+        }
+        .child::after{
+            content: r;
+        }
+        .child::before{
+            content: p;
+
+        }
+        .child::selection{
+         color: brown;
+         background-color: greenyellow;
+        }
+        .fir::first-letter{
+            font-size: 40px;
+        }
+        .sec::first-line{
+            color: burlywood;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="" class="child">home</a>
+            <a href="" class="child">contact</a>
+            <a href="" class="child">about</a>
+        </div>
+    </div>
+    <p class="fir">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eius minus nam temporibus debitis iusto.</p>
+    <p class="sec">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus facilis id autem natus distinctio doloribus fugit quaerat suscipit esse beatae.</p>
+</body>
+</html>

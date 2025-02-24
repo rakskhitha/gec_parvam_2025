@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex in css</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .container {
+            width: 30vw;
+            height: 30vh;
+            gap: 10px;
+            align-content: start;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: space-between;*/
+         justify-content: center;
+         
+           
+            flex-direction: row-reverse;
+            align-items: start;
+   
+
+        }
+
+        .child {
+            text-align: center;
+            height: 2vh;
+            width: 5vw;
+            background-color: aquamarine;
+            border: 2px solid red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="child first">1</div>
+        <div class="child sec">2</div>
+        <div class="child thi">3</div>
+        <div class="child  four">4</div>
+        <div class="child fiv">5</div>
+        <div class="child first">6</div>
+        <div class="child sec">7</div>
+        <div class="child thi">8</div>
+        <div class="child  four">9</div>
+        <div class="child fiv">10</div>
+        <div class="child first">11</div>
+        <div class="child sec">12</div>
+        <div class="child thi">13</div>
+        <div class="child  four">14</div>
+        <div class="child fiv">15</div>
+        <div class="child first">16</div>
+        <div class="child sec">17</div>
+        <div class="child thi">18</div>
+        <div class="child  four">19</div>
+        <div class="child fiv">20</div>
+    </div>
+</body>
+
+</html>

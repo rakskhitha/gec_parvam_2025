@@ -1,0 +1,17 @@
+div {color:red;
+}
+body{
+    background-image: url("nature.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: left top; */
+    height: 100vh;
+    /* background-attachment: fixed; */
+    background-attachment: scroll;
+    margin: 0;
+    padding: 0;
+    
+}
+p{
+    color: blue;
+}

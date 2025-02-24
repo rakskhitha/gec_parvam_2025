@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 20px;
+            padding: 40px;
+            box-sizing:border-box;
+        }
+        .first{
+            width: 30vw;
+            height: 20vh;
+            background-color:aqua;
+           align-items: center;
+           border: 2px solid black;
+           justify-content: center;
+
+          /*  transition: bacground-color 3s;*/
+          transition: all 3s;
+         /* transition-timing-function: ease-in;*/
+         transition-timing-function: ease-in-out 1s;
+         transition-delay: 1s;
+
+        }
+        .first:hover{
+            background-color: yellow;
+            transform: translate(300px,400px) scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <span></span>
+        
+    </div>
+</body>
+</html>

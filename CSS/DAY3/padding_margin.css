@@ -1,0 +1,25 @@
+#can{
+    /* padding: 20px; */
+    /* other method */
+    padding: 10px 10px 10px 180px;
+    /* other method */
+    /* padding-top: 20px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px; */
+    border: 1px solid red; 
+    border-width: 5px;
+      /* other method  */
+    /* padding: 20px 30px;  */
+    /* margin:5px; */
+    /* other method */
+    /* margin-top:10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px; */
+    /* other method */
+    /* margin:10px5px */
+    /* other method */
+    text-align: center;
+margin: 20px 20px 20px 180px;    
+}

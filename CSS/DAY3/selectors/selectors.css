@@ -1,0 +1,47 @@
+p{
+    color: brown;
+    text-align: center;
+    text-shadow: 3cm;
+    display: flex;
+    text-decoration: wavy;
+
+}
+#name{
+   color: blue;
+   text-decoration: solid;
+   background-color: antiquewhite;
+   border-radius: 30px;
+}
+.add{
+    background-image:url("nature.jpeg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-align:justify;
+    text-transform: capitalize;
+    opacity: 1;
+    border-radius: 50px;
+    background-color: yellowgreen;
+    padding: 40px;
+}
+*{
+    color: blue;
+   text-decoration: solid;
+   background-color: antiquewhite;
+   border-radius: 30px;
+
+}
+section,article{
+    color: blue;
+   text-decoration: solid;
+   background-color: antiquewhite;
+   border-radius: 30px;
+}
+
+input[type="text"]{
+    color: blue;
+    text-decoration: solid;
+    background-color: antiquewhite;
+    border-radius: 30px;
+ 
+    
+}

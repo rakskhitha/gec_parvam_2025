@@ -1,0 +1,17 @@
+#rak{
+    background-image: url("nature.jpeg");
+    background-size: cover;
+  
+    /* background-clip: border-box; */
+    background-clip: content-box;
+    /* background-clip: padding-box; */
+    padding: 50px;
+    border: 10px solid red;
+
+    height: 100vh;
+    width: 90vw;
+    margin: 0;
+
+}
+
+

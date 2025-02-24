@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --green: rgb(32, 163, 32)
+            --aqua:rgb(51, 215, 215)
+        }
+        .ptag{
+         /*  background-color:aqua*/
+         background-color: var(--aqua);
+        }
+        .divtag{
+           
+         /*  background-color: rgb(32, 163, 32);*/
+         background-color: var(--green);
+        }
+        .ptag1{
+            /*  background-color:aqua*/
+            background-color: var(--aqua);
+           }
+           .divtag1{
+           
+            /*  background-color: rgb(32, 163, 32);*/
+            background-color: var(--green);
+           }
+           .fir{
+            background-color:var(--aqua);
+           
+
+           }
+           .sec{
+            background-color: var(--green);
+            position: absolute;
+            top:0;
+            z-index:1;
+            right: 200px;;
+           }
+.container{
+    margin: 30px;
+    border: 2px solid black;
+    width: 120px;position: relative;
+}
+.child{
+    width: 40px;
+    height: 50px;
+    border: 2px solid red;
+}
+        
+    </style>
+</head>
+<body>
+    <p class="ptag">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, culpa voluptates fugit excepturi nesciunt maiores id reiciendis voluptate. Temporibus voluptas, impedit dicta tempore exercitationem id optio architecto laboriosam corporis. Saepe!</p>
+    <p class="divtag">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non iusto ad, optio eum distinctio blanditiis.</p>
+    <p class="ptag1">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    <p class="divtag1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores nam veritatis quam fugiat harum ut.</p>
+
+
+
+
+    <div class="container">
+        <div class="child fir">1</div>
+        <div class="child sec">2</div>
+    </div>
+</body>
+</html>

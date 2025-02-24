@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: blue;">   WELCOME T0 DELICIOUS FOOD HUNT </h1>
+    <h2 style="color: brown;"> Have a taste Of </h2>
+    <ul>
+        <fieldset>
+            <legend>super special </legend>
+        <li> Ragi Mudde </li>
+        <img src="./ragi.jpeg" alt=" not available" width="300px" height="90px" style="border-radius: 50%;">
+        <dl>
+            <dt> Ragi Mudde</dt>
+            <dd>A staple dish in the region, Ragi Mudde is made from finger millet flour (ragi) mixed with water and cooked into a soft, dense ball. It is usually served with spicy curries, sambar, or dal.</dd>
+        </dl>
+    </fieldset><br>
+    <fieldset>
+    <legend>Tasty food</legend>
+
+        
+        <li>Bisi Bele Bath</li>
+        <img src="./bisi.jpeg" alt="not available" style="border-radius: 50%;">
+        <dl>
+            <dt> Bisi Bele Bath</dt>
+            <dd> A traditional Karnataka dish made from rice, lentils, vegetables, and a blend of spices. It has a hearty, comforting flavor, with a hint of tanginess from tamarind.
+            </dd>
+        </dl>
+    </fieldset>
+    <fieldset>
+        <legend>dosa dosa dosa neer dosa</legend>
+        <li>Neer Dosa</li>
+        <img src="./neer.jpeg" alt="not available" style="border-radius: 50%;">
+        <dl>
+            <dt> Neer Dosa</dt>
+            <dd>  A thin, soft dosa made from rice flour, which is batter-based and cooked on a flat griddle. It's very popular in the coastal areas of Karnataka </dd>
+        </dl>
+    </fieldset>
+
+        <li> Kotte Kadabu</li>
+        <img src="./kadubu.jpeg" alt="not avilable" style="border-radius: 50%;">
+        <dl>
+            <dt> Kotte Kadabu</dt>
+            <dd>  Kotte Kadabu are rice dumplings made from rice flour and filled with a mixture of coconut and jaggery. They are steamed and served as a sweet or savory snack.</dd>
+        </dl>
+    
+
+    </ul>
+    <h4> menu</h4>
+    <table border="1">
+    <tr>
+        <th>food</th>
+        <th>price</th>
+
+    </tr>
+    <tr>
+        <td>ragi mudde</td>
+        <td>80 rs</td>
+    </tr>
+    <tr>
+        <td>bisi bele bath</td>
+        <td>120 rs</td>
+    </tr>
+    <tr>
+        <td>neer dosa</td>
+        <td>150 rs</td>
+    </tr>
+</table>
+    <h3> Rate the taste </h3>
+   <input type="checkbox" name="likes" id="likes">
+   <label for="likes">1</label>
+   <input type="checkbox" name="likes" id="likes">
+   <label for="likes">2</label>
+   <input type="checkbox" name="likes" id="likes">
+   <label for="likes">3</label>
+   <input type="checkbox" name="likes" id="likes">
+   <label for="likes">4</label>
+   <input type="checkbox" name="likes" id="likes">
+   <label for="likes">5</label>
+   <p>THANK YOU FOR RATING   <img src="thank.jpeg" ></p>
+
+   <form action="#" novalidate>feedback</form>
+   <input type="text" name="messeage" id="mess" placeholder="messege here"  ><br>
+   <button type="submit" style="color: aqua ;">submit your feedback</button><br>
+ 
+</body>
+</html>

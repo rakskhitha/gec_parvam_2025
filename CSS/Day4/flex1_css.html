@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex in css</title>
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        .container {
+            width: 20vw;
+            height: 20vh;
+
+            align-items: center;
+            border: 2px solid black;
+            display: flex;
+            /* justify-content: space-between;*/
+            /* justify-content: end;*/
+            justify-content: space-evenly;
+        }
+
+        .child {
+            height: 2vh;
+            width: 2vw;
+            background-color: aquamarine;
+            gap: 10px;
+            border: 2px solid red;
+            align-items: center;
+        }
+
+        .fiv {
+            align-self: flex-start;
+        }
+
+        .first {
+            flex-grow: 2;
+        }
+
+        .sec {
+            flex-shrink: 2;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="child first">1</div>
+        <div class="child sec">2</div>
+        <div class="child thi">3</div>
+        <div class="child  four">4</div>
+        <div class="child fiv">5</div>
+    </div>
+</body>
+
+</html>
