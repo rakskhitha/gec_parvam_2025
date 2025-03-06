@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ref_pre</title>
+    <!-- ref -ex: pointer,array -->
+
+</head>
+<body>
+    <script>
+        //duplicating values
+        let x = 10;
+        let y = x;
+        console.log("The value of  x before is: ",x);//10
+        console.log("The value of  y before is: ",y);//10
+        x = 100;
+        console.log("The value of  x after is: ",x);//100
+        console.log("The value of  y after is: ",y);//10
+
+        //giving reference of one variable to another variable
+        let array1 = [12, 13, 14, 15];
+        let array2 = array1;
+        console.log("The value of  array1 before is: ",array1);
+        console.log("The value of  array2 before is: ",array2);
+        array1.push(24);
+        console.log("The value of  array1 after is: ",array1);
+        console.log("The value of  array2 after is: ",array2);
+
+    </script>
+</body>
+</html>

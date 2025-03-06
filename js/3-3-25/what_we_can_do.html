@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+    <h3>1.we can change HTML content</h3>
+    <p id="demo">This is extisting content</p>
+    <button  onclick="document.getElementById('demo').innerText='js will change the html cointent'">click me</button>
+     
+    
+    <h3>2.we can change the atribute of html</h3>
+    <img src="off.jpg" alt="" id="bulb_img">
+     <button type="button" onclick="document.getElementById('buld_img').src='on.jpg'">TURN ON </button>
+       <button type="button" onclick="document.getElementById('buld_img').src='off.jpg'">TURN OFF </button>
+
+   <h3>3.we can change the css style</h3>
+    <p id="demo1">lorem</p>
+    <button onclick="document.getElementById('demo1').style.color='red'">click me </button>
+
+
+   <h3>4.we can hide the html code</h3>
+   <p id="demo3"> lorem .ksoji jsd</p>
+   <button type="button" onclick="document.getElementById('demo3').style.display='none'">clickme</button>
+
+   <h3>5.we can show the html code</h3>
+   <p id="demo4" style="display:none";> lorem .ksoji jsd</p>
+   <button type="button" onclick="document.getElementById('demo4').style.display='block'">clickme</button>
+
+  
+</body>
+</html>

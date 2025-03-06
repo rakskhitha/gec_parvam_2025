@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <h1>string is immutable-string</h1>
+    <h1>mutable-array</h1>
+    <h1>string in js</h1>
+    <p>methods in string</p>
+    <p>1.length</p>
+    <p>2.slice</p>
+    <p>3.substring</p>
+    <p>4.substr</p>
+    <p>5.replace</p>
+    <p>6.toUpperCase</p>
+    <p>7.to Lowercase</p>
+    <p>8.trim</p>
+    <p>9.indexof</p>
+    <p>10.startswith</p>
+    <p>11.endswith</p>
+    <p>12.includes()</p>
+    <p>13.concat()</p>
+
+  
+
+
+    <script>
+     //   let str1="hello world"
+      //  console.log(str1);
+       // console.log(typeof str1);
+       let str1="Hello world";
+       const len=str1.length;
+       console.log(`the lenght of straing ${str1} is :${len}`);//recommanded
+      // console.log("the length of string"+ str1+"is"+len);//use of + results in string in output that is string+number=string it donot preserves the datatype
+      // console.log("the length os string ",str1,"is",len);// use of , preservers the data type
+     //slice(strat,end) start is included and end is excluded
+      let str2=" javascript"
+      let str3=str2.slice(2,7);
+      console.log(`the scliced string is : ${str3}`);
+      console.log(`the sliced `,str2.slice(4));//strats from index 4 upto end
+      console.log(str2[5]);
+      console.log("the scliced string :",str2.slice(-8,-3));//negative index reverse order left to right : -7-6-5-4-3-2-1
+
+
+
+
+      //substring
+      let str4 ="helojavascript";
+      let str5=str4.substring(2,7);//    substring(start and end)    and end is excluded
+      console.log(`the string is ${str5}`);
+      console.log(`the string is ${str5.substring(-13,-9)}`);// cannot define negative in substring 
+
+
+
+  //substr
+  let str6="hello world";
+  let str7=str6.substr(2,7) //substr(start,length)
+console.log(`the string is ${str7}`);
+console.log(`the string is ${str6.substr(-9,7)}`);
+
+
+
+//replace
+let str8="java script"
+let str9=str8.replace("java","python");
+console.log(`the string id ${str9}`);
+
+
+//toupper case
+
+let str10="raksha";
+let str11=str10.toUpperCase();
+console.log(`the upper case of ${str10} is ${str11}`);
+
+
+//tolowercase
+
+
+let str12="RAKSHITHA"
+let str13=str12.toLowerCase()
+console.log(`the lower case of ${str12} is ${str13}`);
+
+//capitalize try out not working
+let strr10="raksha";
+let strr11=strr10.capitalize();
+console.log(`the capitalize of ${strr10} is ${strr11}`);
+
+
+
+//trim
+let str14="           rakshitha           "
+console.log(str14);
+let str15=str14.trim()
+console.log(`the  after trim ${str15}`);
+
+
+
+
+
+
+//indexof
+    //9.indexof()
+    let str16="hello woorld";
+    let str17=str16.indexOf("ello");
+    console.log(`the  index  is ${str17}`);
+
+    //10.startsWith()
+    let str18="hello  javascript";
+    let str19=str18.startsWith("ello");
+    console.log(`the res is ${str19}`);
+
+   //11.endsWith()
+    let str20="hello  javascript";
+    let str21=str18.endsWith("ello");
+    console.log(`the res is ${str21}`);
+
+  //12.includes()
+  let str22="Hello world";
+  let str23=str22.includes("llo");
+  console.log(`the res is ${str23}`);
+
+  //13.concat()
+  let str24="hello";
+  let str25=str24.concat(""," world!");
+  console.log(`the res is ${str25}`);
+
+
+
+    </script>
+</body>
+</html>

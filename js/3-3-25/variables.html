@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+      <h1>How amy types we can declare variable</h1>
+      <h3>4 types</h3>
+      <h3>automatically</h3>
+      <h3>using var</h3>
+      <h3>using let</h3>
+      <h3>using const</h3>
+
+
+
+
+      <!-- automatically -->
+       name="raksha"
+       console.log("the value is :" + name);
+       console.log("the type is "+ typeof name);
+
+
+       <!-- var -->
+        var name=24;
+        console.log("the value is :" + name);
+        console.log("the type is "+ typeof name);
+
+        <!-- let -->
+         let name=true;
+         console.log("the value is :" + name);
+         console.log("the type is "+ typeof name);
+
+         <!-- const-->
+          const name=121n;
+          console.log("the value is :" + name);
+          console.log("the type is "+ typeof name);
+
+         
+
+
+
+          <script>
+            
+          </script>
+          <script>
+            //Difference between var ,let and const
+            //re declareing and donot have block scope
+            var var1=23;
+            console.log("before:",var1);
+
+            var var1="name";
+            console.log("same var1 is redeclared using var only:",var1);
+
+
+
+
+            //let
+            let var2 ="var2";
+            console.log("before:",var2);
+            //again declare means we get error
+            //let var2="raksha";
+            //console.log("we cant declare again  then it shows erroe as canot redeclare using let:",var2);
+
+
+
+
+            //const
+            const pi=3.14
+            console.log("before:",pi);
+            //pi=23.4
+          //  console.log("we canot assign the value of constant value ",pi);
+            //const pi=3.14
+           // console.log("we cannot able to redeclare ",pi);
+
+
+            
+
+
+          </script>
+
+</body>
+</html>
