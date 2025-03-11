@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <h1>Conditional Statements</h1>
+    <p>1. if</p>
+    <p>2. else</p>
+    <p>3. else if ladder</p>
+    <p>4. switch</p>
+
+    <script>
+        //1.if and 2. else
+            var age = 18;
+            // if (age > 18){//condition true
+            //     console.log("yes she is greater than 18");
+            // }
+            // else{//condition false
+            //     console.log("yes she is  not greater than 18");
+            // }
+        
+        //3.else if ladder(for more than one if condition) checks multiple conditions for multiple variable
+            var age = 10;
+             if (age > 0 && age < 10){
+                console.log("greater than 0 and less than 9");
+            }
+            else if(age >= 10 && age < 20) {
+                console.log("greater than equal to 10 and less than 20");
+            }
+            else if(age >= 20 && age < 30) {
+                console.log("greater than equal to 20 and less than 30");
+            }
+            else{
+                console.log("none of the above conditions satisfied");
+            }
+
+
+
+            //practice
+            // var age = 10;
+            //  if (age >=0 && age <= 12){
+            //     console.log("Child");
+            // }
+            // else if(age >= 13 && age <= 19) {
+            //     console.log("Teenager");
+            // }
+            // else if(age >= 20 && age <= 59) {
+            //     console.log("Adult");
+            // }
+            // else if(age >= 60 && age <= 100) {
+            //     console.log("Old");
+            // }
+            // else{
+            //     console.log("invalid age");
+            // }
+
+        //4.switch conditons:checks multiple conditions for single  variable
+            /*syntax:
+            switch(condition){
+                case1:{
+                //code1;
+                break;
+                }
+                case2:{
+                //code2;
+                break;
+                }
+            */
+
+            // let num = 3;
+            // switch(num){
+            //     case 1:{
+            //         console.log("the given number is 1");
+            //         break;
+            //     }
+            //     case 2:{
+            //         console.log("the given number is 2");
+            //         break;
+            //     }
+            //     case 3:{
+            //         console.log("the given number is 3");
+            //         break;
+            //     }
+            //     default:{
+            //         console.log("the number is > 2 or less than 1");
+            //         break;
+            //     }
+            // }
+
+            //practice
+            let day= Number(prompt("enter the day"))
+            switch(day){
+                case 1:{
+                    console.log("Sunday");
+                    break;
+                }
+                case 2:{
+                    console.log("Monday");
+                    break;
+                }
+                case 3:{
+                    console.log("Tuesday");
+                    break;
+                }
+                case 4:{
+                    console.log("Wednesday");
+                    break;
+                }
+                case 5:{
+                    console.log("Thursday");
+                    break;
+                }
+                case 6:{
+                    console.log("Friday");
+                    break;
+                }
+                case 7:{
+                    console.log("Saturday");
+                    break;
+                }
+                default:{
+                    console.log("invalid");
+                }
+            }
+
+
+            
+
+
+
+
+
+    </script>
+</body>
+</html>

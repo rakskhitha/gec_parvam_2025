@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async</title>
+</head>
+<body>
+    <h1>Async</h1>
+
+
+    <script>
+        //syncgronous : line by line
+        console.log("hi");
+        console.log("hi");
+        console.log("Hello");
+
+        //asynchrous :run in browser not in js
+        console.log("hello");
+        //time delay
+        setTimeout(() =>{
+            console.log("Hello1");
+        },3000);
+
+        //regular interval execute
+        setInterval(() =>{
+            console.log("Hello12");
+        },1000);
+        console.log("Hello121");
+       
+    </script>
+</body>
+</html>
