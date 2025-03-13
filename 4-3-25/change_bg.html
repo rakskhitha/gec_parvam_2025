@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change BG</title>
+    <style>
+        .container{
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="child">
+            <h1 id="color_code">Background color is: </h1><span id="color"><h2>rgb(255,255,255)</h2></span><br><br>
+            <button type="button" id="change_bg_btn" onclick="handleClick()">Change the Background color </button>
+        </div>
+    </div>
+
+    <script>
+        function getBgColor(){
+            const red =  Math.floor(Math.random() * 256);
+            const  green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+            return `rgb(${red} ${green} ${blue})`;//`` backticks above the tab
+        }
+
+        function  handleClick(){
+            const bg_color = getBgColor();
+           // console.log(bg_color);
+            const container = document.getElementById("container");
+            container.style.backgroundColor = bg_color;
+            const text = document.getElementById("color");
+            text.textContent = bg_color;
+        }
+    </script>
+</body>
+</html>

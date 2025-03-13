@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* .container {
+            background-color: rgb(147, 193, 193);
+            margin: 50px auto;
+            padding: 40px;
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .form {
+            background-color: aliceblue;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 100%;
+            border-radius: 5px;
+            color: white;
+            background-color: rgb(107, 237, 107);
+            border: none;
+            padding: 10px;
+        }
+
+        button:hover {
+            background-color: aqua;
+            color: chocolate;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container shadow-lg g-3 my-3 rounded-5">
+        <div class="row justify-content-center">
+            <h1 class="text-center">Registration Form</h1>
+            <div class="col-12 col-sm-8 col-lg-6">
+                <form id="registrationForm" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <span class="text-danger" id="nameError"></span> 
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        <span class="text-danger" id="emailError"></span> 
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        <span class="text-danger" id="passwordError"></span> 
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" id="cpassword" placeholder="Confirm your password">
+                        <span class="text-danger" id="cpasswordError"></span> 
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Address</label>
+                        <textarea class="form-control" id="address" placeholder="Enter your address"></textarea>
+                        <span class="text-danger" id="addressError"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="pincode" class="form-label">Pincode</label>
+                        <input type="text" class="form-control" id="pincode" placeholder="Enter your pincode">
+                        <span class="text-danger" id="pincodeError"></span> 
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="bg-primary rounded-2 p-2">Submit</button>
+                    </div><br><br>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const registrationForm = document.querySelector("#registrationForm");
+
+            registrationForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+
+                // Function to show error message
+                const showError = (eleId, text) => {
+                    document.getElementById(eleId).textContent = text;
+                };
+
+                // Function to clear error message
+                const clearError = (eleId) => {
+                    document.getElementById(eleId).textContent = "";
+                };
+
+                // Validation function
+                const formValid = () => {
+                    let isValid = true;//it means entire form is valid by default
+
+                    const name = document.querySelector("#name").value.trim();
+                    const email = document.querySelector("#email").value.trim();
+                    const password = document.querySelector("#password").value;
+                    const cpassword = document.querySelector("#cpassword").value;
+                    const address = document.querySelector("#address").value.trim();
+                    const pincode = document.querySelector("#pincode").value.trim();
+
+                    // Name validation
+                    if (name === "") {
+                        showError("nameError", "Name field is required");
+                        isValid = false;
+                    } else if (name.length < 3) {
+                        showError("nameError", "Name must be at least 3 characters long");
+                        isValid = false;
+                    } else {
+                        clearError("nameError");
+                        isValid = true;
+                    }
+
+                    // Email validation
+                    const emailPattern =/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    console.log(email);
+                    if (email === "") {
+                        showError("emailError", "Email field is required");
+                        isValid = false;
+                    } else if (!emailPattern.test(email)) {
+                        showError("emailError", "Email is invalid");
+                        isValid = false;
+                    } else {
+                        clearError("emailError");
+                        isValid = true;
+                    }
+
+                    // Password validation
+                    const passwordPattern =/^(?=.[A-Z])(?=.[a-z])(?=.[@$%!?&])[A-Za-z\d@#$%^&?!]{8,}$/
+                    console.log(password);
+                    if (password === "") {
+                        showError("passwordError", "Password field is required");
+                        isValid = false;
+                    } else if (!passwordPattern.test(password)) {
+                        showError("passwordError", "Password must contains ateleast one uppercase one lowercase  and one special character and minimum length is 8 characters ");
+                        isValid = false;
+                    } else {
+                        clearError("passwordError");
+                        isValid = true;
+                    }
+
+                    // Confirm Password validation
+                    const cpasswordPattern =/^(?=.[A-Z])(?=.[a-z])(?=.[@$%!?&])[A-Za-z\d@#$%^&?!]{8,}$/
+                    console.log(password);
+                    if (cpassword === "") {
+                        showError("cpasswordError", " Confirm Password field is required");
+                        isValid = false;
+                    } else if (!cpasswordPattern.test(cpassword)) {
+                        showError("cpasswordError", "Password doesn't matching ");
+                        isValid = false;
+                    } else {
+                        clearError("cpasswordError");
+                        isValid = true;
+                    }
+
+
+                    //Address validation
+                    if (address === "") {
+                        showError("addressError", " Address field is required");
+                        isValid = false;
+                    } else {
+                        clearError("pincodeError");
+                        isValid = true;
+                    }
+
+
+                    //Pincode validation
+                    const pincodePattern =/^\d{6}$/;
+                    console.log(pincode);
+                    if (pincode === "") {
+                        showError("pincodeError", " Pincode field is required");
+                        isValid = false;
+                    } else if (!pincodePattern.test(pincode)) {
+                        showError("pincodeError", "Invalid pincode");
+                        isValid = false;
+                    } else {
+                        clearError("pincodeError");
+                        isValid = true;
+                    }
+
+                    return isValid;
+                };
+
+                if (formValid()) {
+                    alert("Form submitted successfully!");
+                    registrationForm.submit();
+                }
+            });
+        });
+   
+   </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

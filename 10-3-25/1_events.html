@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>events in JS</h1>
+    <p>1.mouse events</p>
+    <p>2.keyboard events</p>
+    <p>3.form events</p>
+    <p>4.window events</p>
+    <p>5.document events</p>
+    <p>6.clipboard events</p>
+    <p>7.media events</p>
+    <h3 id="htag">hello html</h3>
+    <!-- <button onclick="handleclick()">change the text</button> --> rather than using onclick function use addEventListener
+     <h1>mouse events</h1>
+    <button id="btn">change the text </button>
+
+
+     <h1>keyboard events</h1>
+     <input type="text" id="inputField" placeholder="Type something">
+<p id="keyMsg"></p>
+
+<h1>form events</h1>
+<input id="username" type="text" placeholder="enter user name" name="username">
+<p id="result"></p>
+<!-- other using select multiple other way in text file -->
+<select id="dropdown">
+    <option value="apple">Apple</option>
+    <option value="banana">Banana</option>
+</select>
+<p id="fruitMsg"></p>
+
+<h1>window events</h1>
+
+<p id="sizeMsg">Resize the window!</p>
+<form id="contactform">
+    <input type="text" name="name" id="name" placeholder="name"><br>
+    <input type="email" name="email" id="email" placeholder="Email"><br>
+
+    <textarea name="message" id="message">write message</textarea><br>
+    <button type="submit">submit</button>
+</form>
+
+
+    <script>
+//1.mouse events
+//const handleclick=()=>{
+//const htag =document.querySelector("#htag");
+//htag.textContent="hello js";
+//}
+//addEventListener
+//MOUSE EVENTS
+//1.click
+//const btn= document.querySelector("#btn");
+//const htag=document.querySelector("#htag");
+//btn.addEventListener("click",()=>{
+ //   htag.textContent="hello JS"
+//});
+
+//2.dblclick
+//const btn= document.querySelector("#btn");
+//const htag=document.querySelector("#htag");
+//btn.addEventListener("dblclick",()=>{
+ //   htag.textContent="hello JS"
+//});
+
+//3.mousedown
+//const btn= document.querySelector("#btn");
+//const htag=document.querySelector("#htag");
+//btn.addEventListener("mousedown",()=>{
+ //   htag.textContent="hello JS"
+//});
+
+//4.mouseover
+
+//const btn= document.querySelector("#btn");
+//const htag=document.querySelector("#htag");
+//btn.addEventListener("mouseover",()=>{
+//    htag.textContent="hello JS"
+//});
+
+
+
+//5.mouseout
+const btn= document.querySelector("#btn");
+const htag=document.querySelector("#htag");
+btn.addEventListener("mouseout",()=>{
+    htag.textContent="hello JS"
+});
+
+
+//KEYBOARD EVENTS
+//1.keypress
+document.getElementById("inputField").addEventListener("keypress", function(event) {
+    document.getElementById("keyMsg").innerText = "You pressed: " + event.key;
+});
+//2.keydown – When a key is pressed down.
+document.getElementById("inputField").addEventListener("keydown", function(event) {
+    document.getElementById("keyMsg").innerText = "You pressed: " + event.key;
+});
+//3.keyup – When a key is released.
+document.getElementById("inputField").addEventListener("keyup", function(event) {
+    document.getElementById("keyMsg").innerText = "You pressed: " + event.key;
+});
+
+
+//FORM EVENTS
+//These events relate to the browser window.
+//1.input
+const username=document.querySelector("#username");
+const result=document.querySelector("#result");
+
+//username.addEventListener("input",()=>{
+ //   result.innerText=username.value;
+//})
+//2.change
+//username.addEventListener("change",()=>{
+  //  result.innerText=username.value;})
+//3.blur
+//username.addEventListener("blur",()=>{
+ //   result.innerText=username.value;})
+//4.focus
+username.addEventListener("focus",()=>{
+  result.innerText=username.value;})
+  //5.submit
+  const contactform=document.querySelector("#contactform");
+  contactform.addEventListener("submit" ,(event)=>{
+    event.preventDefault();
+    console.log("hello");
+  })
+
+    //using select for multiple  use other way
+//1.input
+//ocument.getElementById("dropdown").addEventListener("input", function() {
+  //  document.getElementById("fruitMsg").innerText = "Selected: " + this.value;
+//});
+//2.focus
+//document.getElementById("dropdown").addEventListener("focus", function() {
+  //  document.getElementById("fruitMsg").innerText = "Selected: " + this.value;
+//});
+//3.blur
+//document.getElementById("dropdown").addEventListener("blur", function() {
+  //  document.getElementById("fruitMsg").innerText = "Selected: " + this.value;
+//});
+//4.change
+//document.getElementById("dropdown").addEventListener("change", function() {
+  //  document.getElementById("fruitMsg").innerText = "Selected: " + this.value;
+//});
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

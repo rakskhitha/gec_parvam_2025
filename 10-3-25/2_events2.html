@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <h1>Events</h1>
+    <p>DOMContentLoaded Event</p>
+    <button id="btn">click</button>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () =>{
+            console.log("hello");
+            document.getElementById("btn").addEventListener("click", (e) =>{
+                console.log(e.target.textContent);
+            });
+        });
+
+        // document.addEventListener("visibilitychange", () =>{
+        //     console.log("hello");
+        //     document.getElementById("btn").addEventListener("click", (e) =>{
+        //         console.log(e.target.textContent);
+        //     });
+        // });
+    </script>
+</body>
+</html>

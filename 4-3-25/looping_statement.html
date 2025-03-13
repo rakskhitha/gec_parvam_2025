@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Looping </title>
+</head>
+<body>
+    <h1>Looping statement</h1>
+    <p>1. for loop - for(ini; cond; incc/dec){}</p>//used when we know the number of iteration//
+    <p>2. while loop 
+        <pre>
+            //ini ex: i=0;
+            while(condition){
+                //code
+                //inc / dec
+            }
+        </pre>
+    </p>
+    <p>3. do while - 
+        <pre>
+        //ini
+        do{
+            //code
+            // ini / dec
+        }while(condition);
+        </pre>
+    </p>
+    <p>4. for in -displays the indexes of item of array </p>
+    <p>5. for of -displays the items of array 
+        <pre>
+
+        </pre>
+    </p>
+    <script>
+        //1. for loop
+        // console.log("for loop");
+        // let array1 = ["items1","items2","items3","items4"]
+        // let len = array1.length;
+        // for (let i=0; i<4; i++ ) {
+        //     console.log(array1[i]);
+        // }
+
+        //2. while loop
+        // console.log("while loop");
+        // let j = 0 ;
+        // while(j < array1.length){
+        //     console.log(array1[j]);
+        //     j++;
+        // }
+
+            //practice
+            // let input_var = Number(prompt("enter number"));
+            // let i = 0;
+            // while(i < input_var){
+            //     console.log(i);
+            //     i++;
+            // }
+
+        
+        //3. do while
+            // console.log("do while loop");
+            // do {
+            //     const  inputVar = +prompt("Enter the number");
+            //     if (inputVar === 20){
+            //         braek;
+            //     }
+            //     }while(true);   
+            
+            // let k = 0;
+                // do{
+                //     console.log(array1[k]);
+                //     k++;
+                // }while(k < array1.length);
+
+
+        //4. for in
+            //for indicies only
+            console.log("for in loop");
+            let new_array1 = [12, 13, 14, 15,16];
+            for (let item in  new_array1){
+                console.log(item);
+            }
+
+            //for items
+            console.log("for in loop2");
+            let new_array2 = [12, 13, 14, 15,16];
+            for (let item in  new_array2){
+                console.log(new_array2[item]);
+            }
+
+
+        //5.for of
+            console.log("for of loop");
+            let new_array = [12, 13, 14, 15,16];
+            for (let item of  new_array){
+                console.log(item);
+            }
+
+        
+        
+        
+
+
+
+    </script>
+</body>
+</html>
