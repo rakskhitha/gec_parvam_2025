@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<body>
+    <h1>Math</h1>
+
+    <script>
+        //Math is bulit in library which contained predefined methods, used for mathematical operations, which is bulit
+
+        console.log(Math);
+        console.log(typeof Math);
+        console.log(Math.PI);
+        
+        let var1 = 49;
+        console.log("sqrt of 49: ",Math.sqrt(var1));//7
+        console.log("2^3: ",Math.pow(2,3));//8
+        
+        console.log("floor: ",Math.floor(2.8));//2
+        console.log("floor: ",Math.floor(3.99999999999999999999999));//4
+        console.log("floor: ",Math.floor(-1.55));//-2, bcz -2 is lesser than the -1
+        
+        console.log("ceil: ",Math.ceil(3.2));//4
+        console.log("ceil: ",Math.ceil(-6.92));//-6
+
+        console.log("Round: ",Math.round(2.5));//3
+        console.log("Round: ",Math.round(99.9));//100
+        console.log("Round: ",Math.round(-98.7));//99
+        console.log("Round: ",Math.round(-98.2));//98
+
+        console.log("random: ",Math.random());// output will  be any random number from 0 to 1
+        console.log("random: ",Math.floor(Math.random() *20));//0-19
+        console.log("random: ",Math.floor(Math.random() *10)) + 1;//1-10  using floor
+        console.log("random: ",Math.ceil(Math.random() *10));//1-10 using ceiling
+    </script>
+</body>
+</html>

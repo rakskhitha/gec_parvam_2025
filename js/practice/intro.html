@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intro</title>
+    <!-- <script>
+        function handle(){
+                document.getElementById('demo').innerText='this is internal js'
+            }
+         </script> -->
+         <script src="ex.js" defer>
+            
+         </script>
+</head>
+<body>
+    <p id="demo">hello welcome </p>
+
+    <!-- html js -->
+    <button type="button" onclick="document.getElementById('demo').innerHTML='this is html js'">click me</button> 
+
+<!-- internbal js -->
+  <button type="button" onclick="handle()">click</button>
+ 
+          <script>
+    function handle(){
+            document.getElementById('demo').innerText='this is internal js'
+        }
+     </script> 
+
+     <!-- external js -->
+      <button type="button" onclick="handleclick()">clicks</button>
+</body>
+</html>

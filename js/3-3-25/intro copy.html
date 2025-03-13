@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to JS</title>
+    <script src="./first.js" defer></script>
+    
+    <!--internal JS -->
+    <!-- <script>
+        function handleClick(){
+            document.getElementById('demo').innerText='Hello...! this is Internal JS';
+        }
+     </script> -->
+</head>
+<body>
+    <!-- HTML JS -->
+     <p id="demo">Hello World</p>
+     <button type="button" onclick="document.getElementById('demo').innerHTML='Hello...! this is HTML JS'">Click Me</button> 
+
+     <button type="button" onclick="handleClick()">Internal JS</button>
+     
+     <button type="button" onclick="handleExternalClick()">External JS</button>
+
+     <!-- Internal JS: it can used in both head tag and body tag --> 
+     <script>
+        function handleClick(){
+            document.getElementById('demo').innerText='Hello...! this is Internal JS';
+        }
+     </script>
+</body>
+</html>

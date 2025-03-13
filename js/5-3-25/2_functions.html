@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>3 ways to declare a function</h1>
+    <p>1.function declaration
+        <p>syntax: <pre>
+            function function_name(parameters){
+                //code
+            }
+        
+        </pre>
+        <pre>
+            //calling  a function
+            function_name();
+        </pre>
+    </p>
+    <p>2.function expression
+        <pre>
+            const function_name = function(parameters){
+                //code
+            }
+            //call
+        function_name(arg)
+        </pre>
+    </p>
+    <p>3. arrow function </p>
+    <pre>
+        const function_name=(parameters) =>{
+            //code
+        }
+        //call function_name(arg);
+    </pre>
+    
+   </p>
+   <h2>4 types of functions</h2>
+   <p>1.functions accepting a  parameter and not returning a value</p>
+   <p>2.functions accepting a  parameter and returning a value</p>
+   <p>3.functions not  accepting a  parameter and not returning a value</p>
+   <p>4.functions  not  accepting a  parameter and  returning a value</p>
+   <script>
+    //function are a block of code ,which is used to perform a specific task when it calls.  
+      //function declaration 
+    // function  display(){
+    //     console.log("this is display function")
+    //    }
+       //function  call
+       //display();  //dry-don't repeat yourself.
+    //    function para_not_return(){
+    //     console.log("functions accepting a  parameter and not returning a value");
+    //    }
+    //    para_not_return();
+    //1.
+       function para_not_return(number){  //parameter
+        console.log(`the  given number is ${number}`);
+       }
+       para_not_return(23);//argument
+       function para_not_return(string){  //parameter
+        console.log(`the  given string is ${string}`);
+       }
+       para_not_return("hello");//argument
+
+       //2.
+       function para_return(number) {
+        return number;
+
+       }
+       const res= para_return(335);
+       console.log(`the  result  is ${res}`);
+
+       function not_para_not_return(){
+          console.log("functions not  accepting a  parameter and not returning a value");
+       }
+       not_para_not_return();
+
+    //    function not_para_return(){
+    //      return "good  morning" ;
+    //    }
+    //    const res1= not_para_return();
+    //    console.log(the result is ${res1});
+
+    function not_para_return(){
+         return 345 ;
+       }
+       const res1= not_para_return();
+       console.log(`the result is ${res1}`);
+//practice to check the number is even or odd.
+
+       function is_even(num){
+         
+        if(num%2==0){
+            console.log("the number is",num,"is even");
+        }
+        else{
+            console.log("the number is",num,"is odd")
+        }
+         return num;
+       }
+       is_even(13);
+
+
+       function is_odd(num){
+         
+         if(num%2!==0){
+             console.log("the number is",num,"is odd");
+         }
+         else{
+             console.log("the number is",num,"is even")
+         }
+          return num;
+        }
+        is_odd(20);
+    //
+    function iseven(num){
+        return num%2 === 0;
+    }
+    const res3=iseven(31);
+    if(res3 === true){
+        console.log("even number");
+    }
+    else{
+        console.log("odd number");
+    }
+   </script> 
+  <script>
+     //function expression
+     const  display1 =  function(){
+        console.log("this  is  the display function expression");
+     } 
+     display1();
+
+
+     const par_not_return=function(num1){
+           console.log(`the value is ${num1}`);
+     }
+     let value1= par_not_return(20);
+     console.log(value1);
+
+
+     const par_return=function(string){
+           return "hi "+string;
+     }
+
+     let value2=par_return("raksha");
+     console.log(value2);
+
+
+     const no_para_return=function(){
+             let x=50;
+             let y=50;
+             let z=x+y;
+             return z;
+     }
+     let value3=no_para_return();
+     console.log(value3);
+
+
+     const no_para_no_return=function(){
+             console.log("functions  not  accepting a  parameter and  returning a value");
+     }
+
+       let value4=no_para_no_return();
+       console.log(value4);
+
+
+
+       const isodd=function(num){
+           return num%2!==0
+       }
+         let value5=isodd(14);
+         if (value5===true){
+            console.log("odd");
+         }
+         else{
+            console.log("even");
+  
+         } 
+
+        </script>
+
+     <script>
+   
+ const  display2 = () => {
+        console.log("this  is  the display  arrow function ")
+              } 
+     display2();
+
+
+
+
+     const par_retur=(num) =>{
+        return  num+100
+     }
+     let value6=par_retur(5)
+     console.log(value6);
+
+
+    const par_no_return=(num1) =>{
+        console.log(`the parameter value is ${num1}`);
+    }
+    let value7=par_no_return()
+    console.log(value7);
+
+
+    const no_para_ret=() =>{
+     return  "hell world"
+    }
+  let value8=no_para_ret()
+
+
+  const no_para_noo_return=()=>{
+    console.log("no parametre no return");
+    
+  }
+   let value9= no_para_noo_return()
+   console.log(value9);
+
+
+
+   const ispalindrom =(num)=>{
+       let original=num;
+       let reversed=0;
+       
+       while(num>0){
+        let digit=num%10;
+         reversed=reversed*10+digit;
+         num=Math.floor(num/10);
+
+       } 
+       return original===reversed;
+   }
+   let value10=ispalindrom(202);
+   console.log(value10);
+  if(value10===true){
+    console.log("palindrom");
+  }
+  else {
+    console.log("not palindrom");
+  } 
+
+
+
+  //string palindrom
+ const palindrom=(str)=>
+  {   let str1=str;
+    console.log(str1);
+    revers=str1.split('').reverse().join('');
+
+return revers==str1;
+  }
+   
+  let value19=palindrom("121");
+  if(value19==true){
+    console.log("palindrom");
+
+  }
+  else{
+    console.log("not palindrom");
+  }
+
+
+   </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

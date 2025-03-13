@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JS</title>
+</head>
+<body>
+    <h1>Operators in JS</h1>
+    <dl>
+        <dt>1. Arth Operator</dt>
+        <dd>+, -, *, /, %, **</dd>
+    </dl>
+
+    <dl>
+        <dt>2. Assign Operator</dt>
+        <dd>=, +=, -=, /=, %=, *=, **=</dd>
+    </dl>
+
+    <dl>
+        <dt>3. Comp Operator</dt>
+        <dd>==, ===, !=, !==, <, >, <=, >=</dd>
+    </dl>
+
+    <dl>
+        <dt>4. Bitw Operator</dt>
+        <dd>&, |, ~, ^</dd>
+    </dl>
+
+    <dl>
+        <dt>5. Logi Operator</dt>
+        <dd>&&, ||, !</dd>
+    </dl>
+
+    <dl>
+        <dt>6. Ternary Operator</dt>
+        <dd>?, :</dd>
+    </dl>
+
+
+    <script>
+        //1.arth operators
+            var x = 5;
+            var y = 2;
+            var z = x + y;
+            console.log("result: ", z);
+
+            var p = 5;
+            var q = 3;
+            var r = p - q;
+            console.log("result: ", r);
+
+            var p = 5;
+            var q = 3;
+            var r = p * q;
+            console.log("result: ", r);
+
+            var p = 5;
+            var q = 3;
+            var r = p / q;
+            console.log("result: ", r);
+
+            var p = 5;
+            var q = 3;
+            var r = p % q;
+            console.log("result: ", r);
+
+            var p = 5;
+            var q = 3;
+            var r = p ** q;
+            console.log("result: ", r);
+
+        //2.assign operator
+            var b = 20;
+            console.log(b);
+             var x=5;
+             var y=10;
+             x += y
+             console.log(x); 
+             var x=5;
+             var y=10;
+             x -= y
+             var x=5;
+             var y=10;
+             x *= y
+             console.log(x); 
+             var x=5;
+             var y=10;
+             x **= y
+             console.log(x); 
+           
+
+
+         //comparition
+         
+      
+         var g=10;
+         console.log(g==5);
+         console.log(g==8);
+
+
+         var g=4;
+         console.log(g === 5);
+         console.log(g==="4");
+         console.log(g===4);
+
+         var x=2;
+         console.log(x!=3);
+
+
+         var x=6;
+         console.log(x!==6);
+         console.log(x!=="7");
+
+         console.log(x<6);
+         console.log(x<=6);
+
+         console.log(x>6);
+         console.log(x>=6);
+
+
+        //bitwise 
+        var a=5;
+        var b=3;
+        console.log(a&b);
+        console.log(a|b);
+        console.log(~a);
+        console.log(a^b);
+
+        //logical 
+        var x=true;
+        var y=false;
+        console.log(x&&y);
+        console.log(x||y);
+        console.log(!x);
+        console.log(!y);
+
+        var x=6;
+        var y=3;
+        console.log(x < 10 && y > 1);
+        console.log(x < 10 || y > 1);
+        console.log(!(x == y));
+
+        //ternary or conditional
+        var x=3;
+        var y=7;
+        var z=5;
+        console.log(	(z < 18) ? x : y);
+        console.log("then value of x is",x);
+
+
+          
+         
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

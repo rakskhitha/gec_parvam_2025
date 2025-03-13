@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  <div class="container" id="container">
+    <div class="child">
+      <h1>change background color</h1><span id="color">rgb(255,255,255)</span>
+      <button type="button" onclick="handles()">change background color</button>
+    </div>
+  </div>
+    <script>
+function get_bg_color(){
+  const red=Math.floor(Math.random() *256);
+  const green=Math.floor(Math.random() *256);
+  const blue=Math.floor(Math.random() *256);
+  return `rgb(${red} ${green}  ${blue})`
+}
+
+
+
+
+      function handles(){
+        const bg_color=get_bg_color();
+        const contain=document.getElementById('container')
+        contain.style.backgroundColor=bg_color;
+        const text=document.getElementById('color')
+        text.textContent=bg_color;
+
+      }
+  
+
+    </script>
+</body>
+</html>
