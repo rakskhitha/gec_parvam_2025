@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<div class="row" style="display: flex; gap:150px">
+<div class="row">
     <div class="col-md-4 col-12">
         <h2 class="alert alert-info text-center">Add Students</h2>
         <form action="{% url 'home' %}" method="post">
@@ -13,23 +13,27 @@
         </form>
     </div>
     <div class="col-md-7 offset-md-1 col-12">
-        <h2 class="alert alert-info text-center" style="justify-content: center;">Students list</h2>
-        <table class="table table-hover" border="1" style="border-collapse:collapse">
+        <h2 class="alert alert-info text-center">Students list</h2>
+        <table class="table table-hover">
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Password</th>
+                    <th>
+                        Actions
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>1</td>
-                    <td>Raksha</td>
-                    <td>raksha@gmail.com</td>
+                    <td>lakshmi</td>
+                    <td>lakshmi@gmail.com</td>
                     <td>12345</td>
-                </tr>
+                </tr> -->
+                
             </tbody>
 
             <tbody>
@@ -39,8 +43,17 @@
                     <td>{{std.name}}</td>
                     <td>{{std.email}}</td>
                     <td>{{std.password}}</td>
+                     <td>
+                        <a href="{% url 'edit' std.id %}" class="btn btn-info">Edit</a>
+                        <a href="{% url 'delete' std.id %}" class="btn btn-info">Delete</a>
+            
+                     </td>
 
                 </tr>
+                {% empty%}
+                <td colspan="6">
+                    <h3 class="alert alert-warning text-center">No Students found</h3>
+                </td>
                 {% endfor %}
             </tbody>
         </table>

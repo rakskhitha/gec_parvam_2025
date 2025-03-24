@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	
+	<style>
+	       body{
+	          width: 60vw;
+	          height: 80vh;
+	          align-items: center;
+	          justify-content: center; 
+	          margin-left: 380px;
+	          margin-top: 100px;
+              margin-bottom: 40px;
+			  background: rgb(174,92,146);
+			  background: linear-gradient(174deg, rgba(174,92,146,1) 33%, rgba(131,58,180,1) 45%, rgba(207,119,119,1) 50%, rgba(164,149,144,1) 64%, rgba(229,146,95,1) 93%, rgba(252,176,69,1) 100%); }
+	       form{
+	           height: 60vh;
+	           width: 30vw;
+	           padding-top: 120px;
+	           padding-left: 40px;
+	           text-align: center;
+	           font-size: large;
+	           border-radius: 5%;
+	           box-shadow: 30px;
+	           font-style: oblique;
+               margin-bottom: 100px;
+               padding-bottom: 50px;
+               
+	       }
+	   </style>
+</head>
+<body>
+	<h1 style="font-style: oblique;">EDIT STUDENT </h1>
+	<form th:action="@{/edit-employee(id=${employee.id})}" method="post" th:object="${employeeDTO}" style="background-color: antiquewhite;">
+	     
+        <label>First Name</label>
+        <input type="text" placeholder=" enter your first name" th:field="*{fName}" ><br><br><br>
+        <label>Last Name</label>
+        <input type="text" placeholder=" enter your last name" th:field="*{lName}"><br><br><br>
+ 
+        <label>Email Address</label>
+        <input type="email" placeholder=" enter your email address" th:field="*{email}"><br><br><br>
+        <label>Phone </label>
+        <input type="number" placeholder=" enter your phone number" th:field="*{phone}"><br><br><br>
+        <label>Address</label>
+        <input type="text" placeholder=" enter address" th:field="*{address}"><br><br><br>
+		<input type="submit" value="Edit Employee" style="background-color: lightblue;justify-content: center;border-radius: 15%; font-style: oblique;">		
+		
+    </form>
+</body>
+</html>

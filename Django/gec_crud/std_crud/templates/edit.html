@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>Edit Page</h1>
+<h2 class="alert alert-secondary text-center ">Edit Student</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{student_form.as_p}}
+    <!-- <input type="sumbit" value="update" class="btn btn-success"> -->
+    <button type="submit" class="btn btn-success">Update</button>
+</form>
+{% endblock content %}
