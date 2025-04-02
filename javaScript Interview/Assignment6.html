@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Destructuring
+        How we can destructure the objects of an array wiht example.
+    </div>
+
+    <!-- code here -->
+    <script>
+        let obj = [{
+            name: "raki",
+            age: 12,
+            marks: 90
+        }, {
+            name: "rakesh",
+            age: 13,
+            marks: 91
+        }]
+
+        console.log(obj[0].name);
+        console.log(obj[0].age);
+        console.log(obj[0].marks);
+
+        console.log(obj[1].name);
+        console.log(obj[1].age);
+        console.log(obj[1].marks);
+
+
+        const con = [10, 20, 30, 40]
+
+        const [x, y, z, w] = con;
+        console.log(x);
+        console.log(y);
+        console.log(z);
+        console.log(w);
+    </script>
+</body>
+
+</html>

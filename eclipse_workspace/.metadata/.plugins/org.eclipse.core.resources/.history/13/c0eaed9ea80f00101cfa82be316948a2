@@ -1,0 +1,5 @@
+package com.simpleSpringboot.FirstwebApp.models;
+
+public class Student {
+
+}
