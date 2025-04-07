@@ -17,6 +17,7 @@ public class Student {
 	private int age;
 	private String email;
 	private String password;
+	private String imagePath;
 	
 	//getter and setter
 	
@@ -50,25 +51,34 @@ public class Student {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
+	public String getImagePath() {
+		return imagePath;
+	}
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
+	}
 	
 	//no args 
+	
 	
 	public Student() {
 		super();
 	}
-	
-	
 	//full args
-	
-	public Student(long id, String name, int age, String email, String password) {
+	public Student(long id, String name, int age, String email, String password, String imagePath) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.email = email;
 		this.password = password;
+		this.imagePath = imagePath;
 	}
+	
+	
+
+	
+	
 	
 	//run xampp and create database
 	//after database creation come to application properties and connect to mysql
