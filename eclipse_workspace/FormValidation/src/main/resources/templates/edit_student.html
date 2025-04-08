@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ADD STUDENT</h1>
+    <h1>EDIT STUDENT</h1>
   <form th:action="@{/edit-student(id=${student.id})}"  enctype="multipart/form-data"method="post" th:object="${studentDTO}">
     <label for="name">NAME</label>
     <input type="text"  name="name" th:field="*{name}" id="name" placeholder="eneter your name"><br>
@@ -25,13 +25,21 @@
 	<p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
     
 	<label for="image">IMAGE</label>
-	<img  alt="image"  width="100px" height="100px"    th:src="@{'images/'+${student.imagePath}}"><br>
-	         
-	    <input type="file" id="image"  th:field="*{image}" ><br>
-		<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p>
-	    
+	<img  alt="image"  width="100px" height="100px"    th:src="@{'images/'+${student.imagePath}}"><br>       
+    <input type="file" id="image"  th:field="*{image}" ><br>
+	<p th:if="${#fields.hasErrors('image')}" th:errors="*{image}"></p>
+		    
 	
-	
+	<label for="document">DOCUMENT</label>
+	<span th:if="${student.documentPath}" th:text="${student.documentPath}"></span><br>
+	      
+	<input type="file" id="document"  th:field="*{document}" ><br>
+	<p th:if="${#fields.hasErrors('document')}" th:errors="*{document}"></p>
+			    
+			
+		
+		
+		
 	<input type="submit" value="EDIT STUDENT">
 
 

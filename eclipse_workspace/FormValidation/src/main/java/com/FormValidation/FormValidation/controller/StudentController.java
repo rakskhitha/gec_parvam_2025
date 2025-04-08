@@ -21,95 +21,95 @@ import jakarta.validation.Valid;
 
 @Controller
 public class StudentController {
-	//to create object constructor injection
-	private final StudentService studentservice;
-		
-	
-	
-//public StudentController(StudentService studentservice) {
-//		super();
-//		this.studentservice = studentservice;
-//		this.studentrepository = null;
-//	}
-//to create object constructor injection
-private final StudentRepository studentRepository;
 
+    private final StudentService studentService;
+    private final StudentRepository studentRepository;
 
+    public StudentController(StudentService studentService, StudentRepository studentRepository) {
+        this.studentService = studentService;
+        this.studentRepository = studentRepository;
+    }
 
+    // Home Page - Display list of students
+    @GetMapping({"", "/"})
+    public String home(Model model) {
+        List<Student> students = studentService.getAllStudents();
+        model.addAttribute("students", students);
+        return "home";
+    }
 
-public StudentController(StudentService studentservice, StudentRepository studentRepository) {
-	super();
-	this.studentservice = studentservice;
-	this.studentRepository = studentRepository;
+    // Add Student Page
+    @GetMapping("/add-student")
+    public String addStudent(Model model) {
+        model.addAttribute("studentDTO", new StudentDTO());
+        return "add_student";
+    }
+
+    // Add Student - Handle form submission and validation
+    @PostMapping("/add-student")
+    public String addStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, Model model, RedirectAttributes attributes) {
+       Student student = studentRepository.findByEmail(studentDTO.getEmail());
+       if(student!=null) {
+    	   result.addError(new FieldError("studentDTO", "email", "email is  allready exist "));
+    	   
+       }
+    	
+    	
+    	
+    	if (studentDTO.getImage().isEmpty()) {
+            result.addError(new FieldError("studentDTO", "image", "Image is required"));
+        }
+        if (studentDTO.getDocument().isEmpty()) {
+            result.addError(new FieldError("studentDTO", "document", "Document is required"));
+        }
+
+        if (result.hasErrors()) {
+            return "add_student";
+        }
+
+        // Save the student
+        studentService.saveStudent(studentDTO);
+        attributes.addFlashAttribute("success", "Student added successfully");
+        return "redirect:/";
+    }
+
+    // Delete Student
+    @GetMapping("/std-delete")
+    public String deleteStudent(@RequestParam Long id, RedirectAttributes attributes) {
+        studentService.deleteStudent(id);
+        attributes.addFlashAttribute("success", "Student deleted successfully");
+        return "redirect:/";
+    }
+
+    // Edit Student Page
+    @GetMapping("/std-edit")
+    public String editStudent(@RequestParam Long id, Model model) {
+        StudentDTO studentDTO = studentService.editStudent(id);
+        Student student = studentRepository.findById(id).get();
+        model.addAttribute("studentDTO", studentDTO);
+        model.addAttribute("student", student);
+        return "edit_student";
+    }
+
+    // Edit Student - Handle form submission for update
+    @PostMapping("/edit-student")
+    public String updateStudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result, @RequestParam Long id, Model model, RedirectAttributes attributes) {
+    	 Student student1 = studentRepository.findByEmail(studentDTO.getEmail());
+         if(student1!=null && student1.getId()!=id) {
+      	   result.addError(new FieldError("studentDTO", "email", "email is  allready exist "));
+      	   
+         }
+      	
+    	   	
+    	
+    	if (result.hasErrors()) {
+            Student student = studentRepository.findById(id).get();
+            model.addAttribute("student", student);
+            return "edit_student";
+        }
+
+        studentService.updateStudent(studentDTO, id);
+        attributes.addFlashAttribute("success", "Student edited successfully");
+        return "redirect:/";
+    }
 }
-
-
-
-@GetMapping({"","/"})
-public String home(Model model) {
-List<Student>  students =	studentservice.getAllStudents();
-model.addAttribute("students", students);
-	return "home";
-}
-
-
-
-//get method to fill the data
-@GetMapping("/add-student")
-public String addstudent(Model model) {
-	model.addAttribute("studentDTO", new StudentDTO());
-	return "add_student";
-}
-
-
-//after filling the form hast post it back to database
-@PostMapping("/add-student")
-public String addstudent(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result,Model model,RedirectAttributes attributes) {
-	if(studentDTO.getImage().isEmpty()) {
-		result.addError(new FieldError("studentDTO","image", "image is required"));
-	}
-	
-	
-	if(result.hasErrors()) {
-		return "add_student";
-	}
-	//System.out.println(studentDTO.getName()+"2");
-	studentservice.saveStudent(studentDTO);
-	attributes.addFlashAttribute("success","student added successfully");
-	return "redirect:/";
-}
-@GetMapping("/std-delete")
-	public String deleteStudent(@RequestParam Long id ,RedirectAttributes attributes) {
-		studentservice.deleteStudent(id);
-		attributes.addFlashAttribute("success","student deleted successfully");
-
-		return "redirect:/";
-	}
-
-@GetMapping("/std-edit")
-public String editStudent(@RequestParam Long id,Model model) {
-	StudentDTO studentDTO = studentservice.editStudent(id);
-	Student student = studentRepository.findById(id).get();
-	model.addAttribute("studentDTO", studentDTO);
-	model.addAttribute("student", student);
-	return "edit_student";
-	
-}
-
-
-@PostMapping("/edit-student")
-public String updateStudnet(@Valid @ModelAttribute StudentDTO studentDTO, BindingResult result ,@RequestParam Long id ,Model model,RedirectAttributes attributes) {
-if(result.hasErrors()) {
-	Student student= studentRepository.findById(id).get();
-	model.addAttribute("student" ,student);
-	return "edit_student";
-}
-studentservice.updateStudent(studentDTO,id);
-attributes.addFlashAttribute("success","student edited successfully");
-return "redirect:/";
-
-}
-
-
-}
-
