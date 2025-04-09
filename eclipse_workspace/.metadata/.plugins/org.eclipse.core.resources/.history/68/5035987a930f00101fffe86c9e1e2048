@@ -1,5 +1,0 @@
-package com.simpleSpringboot.FirstwebApp.controller;
-
-public class HomeController {
-
-}
