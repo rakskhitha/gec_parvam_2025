@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\sairam\Desktop\RakshaParvam\gec_parvam_2025\eclipse_workspace\Card Display CRUD"/>
 			<item value="C:\Users\sairam\Desktop\gec_parvam_2025\Spring_Boot\springsecurity"/>
 			<item value="C:\Users\sairam\Desktop\gec_parvam_2025\Spring_Boot\springSecurityDemo"/>
 			<item value="C:\Users\sairam\Downloads\springsecurity"/>
@@ -16,7 +17,6 @@
 			<item value="C:\Users\sairam\Desktop\gec_parvam_2025\Spring_Boot\Registration"/>
 			<item value="C:\Users\sairam\Desktop\gec_parvam_2025\eclipse_workspace\FormValidation"/>
 			<item value="C:\Users\sairam\Desktop\RakshaParvam\eclipse_workspace\Registration"/>
-			<item value="C:\Users\sairam\Desktop\RakshaParvam\eclipse_workspace\studentregistration"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

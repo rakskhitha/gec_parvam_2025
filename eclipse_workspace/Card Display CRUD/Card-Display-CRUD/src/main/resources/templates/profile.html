@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Profile Form</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f6f9fc;
+            margin: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .profile-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .card {
+            width: 200px;
+            border-radius: 15px;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .delete-icon {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #ff4444;
+            cursor: pointer;
+        }
+
+       .bg-male {
+    background-color: #add8e6; /* light sky blue */
+    color: #000; /* black text */
+}
+
+/* Light pink for female */
+.bg-female {
+    background-color: #ffe4ec; /* light pink */
+    color: #000; /* black text */
+}
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Profile Form</h2>
+    <form th:action="@{/addProfile}" th:object="${profile}" method="post">
+        <label>Name:</label><br/>
+        <input type="text" th:field="*{name}" required/><br/><br/>
+
+        <label>Gender:</label><br/>
+        <input type="radio" th:field="*{gender}" value="Male" required/> Male
+        <input type="radio" th:field="*{gender}" value="Female" required/> Female<br/><br/>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<div class="profile-cards">
+    <div th:each="p, iter : ${profiles}" 
+         th:class="'card ' + (p.gender == 'Male' ? 'bg-male' : 'bg-female')">
+         
+        <!-- Corrected image path using updated filenames -->
+        <img th:src="@{${'/images/' + (p.gender == 'Male' ? 'male.png' : 'female.png')}}" 
+             class="avatar" alt="Avatar" />
+             
+        <div th:text="${p.name}"></div>
+        <a th:href="@{'/delete/' + ${iter.index}}" class="delete-icon">🗑️</a>
+    </div>
+</div>
+
+</body>
+</html>
