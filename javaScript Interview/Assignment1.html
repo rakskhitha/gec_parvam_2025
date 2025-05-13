@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Explain how to select elements using getElementById, querySelector, and modify their content. <br>
+        Task: Create a button and p. Write a JavaScript function that updates the text inside
+        p when the button is clicked.
+    </div>
+
+
+    <!-- code here -->
+     <p id="demo">hello world </p>
+     <button type="submit" onclick="handleClick()">change</button>
+
+     <script>
+
+        function handleClick(){
+         const res= document.getElementById("demo").innerText="hiii world";
+        }
+        console.log(res);
+     </script>
+    
+</body>
+</html>

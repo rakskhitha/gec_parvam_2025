@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Write an asynchronous function that simulates fetching data from an API using fetch(). Log the response data to
+        parent div without touching html. <br>
+        API = "https://jsonplaceholder.typicode.com/posts"
+    </div>
+
+    <!-- code here -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        Write an asynchronous function that simulates fetching data from an API using fetch(). Log the response data to
+        the console. <br>
+        API = "https://jsonplaceholder.typicode.com/posts"
+    </div>
+
+    <!-- code here -->
+
+  
+    <div id="divtag"></div>
+    <script>
+        const url ="https://jsonplaceholder.typicode.com/posts";
+        const getUsers=async(url)=>{
+            const res=await fetch(url);
+            console.log(res);
+            const jsonRes=await res.json();
+            console.log(jsonRes);
+            jsonRes.forEach((curEle) =>{
+            console.log(curEle);
+            document.getElementById("divtag").innerHTML +=`<p> this user id  : ${curEle.userId}</p>`
+
+            document.getElementById("divtag").innerHTML +=`<p> this id  : ${curEle.id}</p>`
+
+            document.getElementById("divtag").innerHTML +=`<p> this id title : ${curEle.title}</p>`
+
+        //    create element
+            const response =document.createElement("div");
+            const htag=document.createElement("h1");
+            htag.textContent=`UserId:${curEle.id}`
+            response.append(htag);
+
+            const ptag1=document.createElement("p");
+            ptag1.textContent=`Title:${curEle.title}`
+            response.append(ptag1);
+
+            const ptag2=document.createElement("p");
+            ptag2.textContent=`Body:${curEle.body}`
+            response.append(ptag2);
+
+            console.log(response);
+            document.getElementById("divtag").append( response);
+
+
+            });
+        }
+        getUsers(url);
+    </script>
+
+
+
+
+</body>
+
+</html>
