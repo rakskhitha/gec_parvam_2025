@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Event - Event Management System</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            background-image: url('https://images.unsplash.com/photo-1523289333742-bea4f7aaf103?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .create-event-form {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+            width: 400px;
+            text-align: center;
+        }
+
+        .create-event-form h2 {
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        .create-event-form input[type="text"],
+        .create-event-form input[type="datetime-local"],
+        .create-event-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .create-event-form button {
+            background: linear-gradient(to right, #36D1DC, #5B86E5);
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .create-event-form button:hover {
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
+        }
+
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="create-event-form">
+    <h2>Create New Event</h2>
+
+    <!-- ✅ Success Message if event is created -->
+    <div th:if="${success}" class="success-message">
+        <p th:text="${success}"></p>
+    </div>
+
+    <form th:action="@{/events/create}" method="post">
+        <input type="text" name="name" placeholder="Event Name" required>
+
+        <input type="text" name="type" placeholder="Event Type (e.g., Conference, Wedding)" required>
+
+        <input type="datetime-local" name="dateTime" required>
+
+        <input type="text" name="venue" placeholder="Event Venue" required>
+
+        <textarea name="description" placeholder="Event Description" rows="4" required></textarea>
+
+        <button type="submit">Create Event</button>
+    </form>
+</div>
+
+</body>
+</html>

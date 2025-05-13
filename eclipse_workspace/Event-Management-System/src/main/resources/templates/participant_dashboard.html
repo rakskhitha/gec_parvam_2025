@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Participant Dashboard</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+			background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+			            url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') 
+			            no-repeat center center/cover;
+
+            height: 100vh;
+            color: white;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+            overflow-y: auto;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            margin: 50px auto;
+            padding: 50px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .event-card {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        button {
+            background: linear-gradient(to right, #36D1DC, #5B86E5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+            cursor: pointer;
+            transition: background 0.4s ease, transform 0.3s;
+        }
+
+        button:hover {
+            background: linear-gradient(to right, #5B86E5, #36D1DC);
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <h1>Welcome Participant! 🎉</h1>
+    <p>View and register for exciting events happening around you.</p>
+
+    <div th:each="event : ${events}" class="event-card">
+        <h2 th:text="${event.name}">Event Name</h2>
+        <p th:text="'Type: ' + ${event.type}">Event Type</p>
+        <p th:text="'Date: ' + ${event.dateTime}">Event Date</p>
+        <p th:text="'Venue: ' + ${event.venue}">Venue</p>
+        
+        <button th:onclick="'location.href=\'/registrations/register/' + ${event.id} + '\';'">Register</button>
+    </div>
+</div>
+...
+
+<!-- Your container div ends here -->
+</div>
+
+<!-- Footer here -->
+<footer style="position: relative; bottom: 0; width: 100%; text-align: center; padding: 15px; background: rgba(0, 0, 0, 0.7); font-size: 14px; color: #ccc; margin-top: 40px;">
+    © 2025 Event Management System. All Rights Reserved.
+</footer>
+
+
+</body>
+</html>
