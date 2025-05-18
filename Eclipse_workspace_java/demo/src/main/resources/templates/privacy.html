@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./privacy&terms.css">
+</head>
+<body>
+
+  <!-- Header & Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="">EMS</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About Us</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" th:href="@{/blog}">Blog by Team</a></li>
+            <li><a class="dropdown-item" th:href="{/testimonials}">Testimonials</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#services" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+		  <ul class="dropdown-menu">
+		                <li><a class="dropdown-item" th:href="@{/servicess/birthday_parties}">Birthday Parties</a></li>
+		                <li><a class="dropdown-item" th:href="@{/servicess/corporate_events}">Corporate Events</a></li>
+		                <li><a class="dropdown-item" th:href="@{/servicess/music_entertainment}">Music & Entertainment</a></li>
+		                <li><a class="dropdown-item" th:href="@{/servicess/private_parties}">Private Parties</a></li>
+		                <li><a class="dropdown-item" th:href="@{/servicess/school_&_college_fests}">School & College fests</a></li>
+		                <li><a class="dropdown-item" th:href="@{/servicess/wedding_planners}">Wedding Planners</a></li>
+		              </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="../gallery/index.html">Gallery</a></li>  
+        <li class="nav-item"><a class="nav-link" href="../contact_us/contact_us.html">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="./login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="./register.html">Register</a></li>
+      </ul>
+      <div>
+        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-light me-2"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- hero section -->
+<section id="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/about1.jpg" class="d-block w-100" alt="Wedding 1" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/imaa.png" class="d-block w-100" alt="Wedding 2" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/ima.png" class="d-block w-100" alt="Wedding 3" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+    <!-- Privacy Policy -->
+    <div class="content-box">
+        <h2 class="section-title">Privacy Policy</h2>
+        <p>At EventCo, we respect your privacy and are committed to protecting it through this policy.</p>
+        <h4>Information We Collect</h4>
+        <ul>
+          <li>Name, email, phone number (when you submit a form)</li>
+          <li>Browsing data via cookies and analytics</li>
+        </ul>
+        <h4>How We Use Information</h4>
+        <ul>
+          <li>To communicate event updates</li>
+          <li>To enhance user experience</li>
+          <li>To provide personalized services</li>
+        </ul>
+        <h4>Security</h4>
+        <p>We use the latest security measures to ensure your data remains safe with us.</p>
+        <h4>Third-Party Sharing</h4>
+        <p>We never sell your data. It is only shared with trusted providers when necessary.</p>
+        <p>By using our services, you agree to the terms of this privacy policy.</p>
+      </div>
+
+      <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-left">
+    <div class="row text-md-left">
+      
+      <!-- Quick Links -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Quick Links</h5>
+        <p><a href="./index.html" class="text-white text-decoration-none">Home</a></p>
+        <p><a href="../about_us/blog.html" class="text-white text-decoration-none">About</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Venues</a></p>
+        <p><a href="../gallery/index.html" class="text-white text-decoration-none">Gallery</a></p>
+        <p><a href="../contact_us/contact_us.html" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Services -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Services</h5>
+        <p><a href="../servicess/corporate_events.html" class="text-white text-decoration-none">Corporate Events</a></p>
+        <p><a href="../servicess/wedding_planners.html" class="text-white text-decoration-none">Wedding Planner</a></p>
+        <p><a href="../servicess/music_&_entertainment.html" class="text-white text-decoration-none">Music & Entertainment</a></p>
+        <p><a href="../servicess/private_parties.html" class="text-white text-decoration-none">Private Parties</a></p>
+        <p><a href="../servicess/school_&_college_fests.html" class="text-white text-decoration-none">School & college Fests</a></p>
+      </div>
+
+      <!-- Other Links -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Other Links</h5>
+        <p><a href="../about_us/blog.html" class="text-white text-decoration-none">Blog</a></p>
+        <p><a href="../about_us/testimonials.html" class="text-white text-decoration-none">Testimonials</a></p>
+        <p><a href="./privacy.html" class="text-white text-decoration-none">Privacy Policy</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Cancellation and Refund Policy</a></p>
+        <p><a href="./terms.html" class="text-white text-decoration-none">Terms of Service</a></p>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold">Contact Info</h5>
+        <p>Melodia Event Management, T V Center, Kakkanad, Kochi, Kerala 682037</p>
+        <p>Melodia Event Management, Flamon Complex, Main Rd, Kuriachira, Thrissur, Kerala 680006</p>
+        <p>Melodia Event Management, Door No: VP 22/152ABC, Vazhakkad Panchayath, Oorkadavu, Po, Oorkadav, Akkod, Kozhikode, Kerala 673640</p>
+      </div>
+
+    </div>
+
+    <hr class="mb-4">
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2025 Melodia Event Management. All rights reserved.</p>
+      </div>
+      <div class="col-md-5 col-lg-4">
+        <div class="text-center text-md-right">
+          <a href="#" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-white me-4"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

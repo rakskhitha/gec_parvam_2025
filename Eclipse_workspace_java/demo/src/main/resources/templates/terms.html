@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: layout(~{::title}, ~{::section})}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ 
+</head>
+<body>
+
+     <section>
+
+<!-- hero section -->
+<section id="hero">
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/about1.jpg" class="d-block w-100" alt="Wedding 1" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/imaa.png" class="d-block w-100" alt="Wedding 2" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/ima.png" class="d-block w-100" alt="Wedding 3" style="height: 100vh; object-fit: cover;">
+        <div class="carousel-caption d-none d-md-block">
+          <h1 class="display-4">Partner with EventCo in Kerala</h1>
+          <p class="lead">Your #1 Exclusive Event Company</p>
+          <a href="#contact" class="btn btn-primary btn-lg">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+    <div class="content-box">
+        <h2 class="section-title">Terms and Conditions</h2>
+        <p>These terms and conditions govern your use of our website and services. By accessing our site, you accept these terms in full.</p>
+        <h4>Eligibility</h4>
+        <p>You must be 18 years or older to book or use our services.</p>
+        <h4>Usage Restrictions</h4>
+        <ul>
+          <li>No misuse of site content or services</li>
+          <li>Do not engage in unlawful activities on our platform</li>
+        </ul>
+        <h4>Service Contracts</h4>
+        <p>All bookings are subject to detailed contracts that will be discussed and signed separately.</p>
+        <h4>Intellectual Property</h4>
+        <p>All materials on this site belong to EventCo. Unauthorized use is prohibited.</p>
+        <h4>Disclaimer</h4>
+        <p>We are not liable for indirect damages arising from use of the website or services.</p>
+        <h4>Updates</h4>
+        <p>We may revise these terms periodically. Continued use indicates your agreement.</p>
+      </div>
+</section>
+       </body>
+</html>

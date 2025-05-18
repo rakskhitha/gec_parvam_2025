@@ -1,0 +1,23 @@
+body {
+    background-color: #f9f9f9;
+  }
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 30px;
+  }
+  .content-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+  }
+  ul {
+    padding-left: 20px;
+  }
+  h4 {
+    color: #495057;
+    margin-top: 25px;
+  }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Header & Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item"><a class="nav-link" th:href="@{/index}">Home</a></li>
+         <li class="nav-item"><a class="nav-link" th:href="@{/login}">Login</a></li>
+        <li class="nav-item"><a class="nav-link" th:href="@{/register}">Register</a></li>
+      </ul>
+    </div>
+     <div>
+            <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="text-light"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+  </div>
+  
+</nav>
+
+<!-- Register Section -->
+<section id="register" class="form-section bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">Register</h2>
+    <div class="form-container">
+      <form th:action="@{/register}" th:object="${userDTO}" method="POST">
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" th:field="*{name}" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" th:field="*{email}" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" id="phone" th:field="*{phone}" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" th:field="*{password}" required>
+        </div>
+        <div class="mb-3">
+          <label for="role" class="form-label">Role</label>
+          <select class="form-select" id="role" th:field="*{role}" required>
+            <option value="USER">User</option>
+            <option value="ADMIN">Admin</option>
+            <option value="ORGANIZER">Organizer</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Register</button>
+      </form>
+    </div>
+  </div>
+  <br>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+   <!-- Contact Info -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Contact Info</h5>
+            <p>Melodia Event Management, T V Center, Kakkanad, Kochi, Kerala 682037</p>
+            <p>Melodia Event Management, Flamon Complex, Main Rd, Kuriachira, Thrissur, Kerala 680006</p>
+            <p>Melodia Event Management, Door No: VP 22/152ABC, Vazhakkad Panchayath, Oorkadavu, Po, Oorkadav, Akkod, Kozhikode, Kerala 673640</p>
+          </div>
+           <div class="container">
+            <p><a href="https://policies.google.com/privacy?hl=en-US" class="text-white text-decoration-none">Privacy Policy</a></p>
+            <p><a href="https://policies.google.com/privacy?hl=en-US" class="text-white text-decoration-none">Cancellation and Refund Policy</a></p>
+            <p><a href="https://policies.google.com/privacy?hl=en-US" class="text-white text-decoration-none">Terms of Service</a></p>
+           
+           &copy; 2025 EMS. All rights reserved.</div>
+    
+  </div>
+   
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
