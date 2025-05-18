@@ -41,7 +41,7 @@ public class UserDTO {
 		}
 		@Override
 		public String toString() {
-			return "studentDTO [name=" + name + ", email=" + email + ", phone=" + phone + ", password=" + password
+			return "userDTO [name=" + name + ", email=" + email + ", phone=" + phone + ", password=" + password
 					+ ", role=" + role + "]";
 		}
 	    

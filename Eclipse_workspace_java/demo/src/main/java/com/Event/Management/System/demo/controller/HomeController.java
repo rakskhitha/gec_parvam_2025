@@ -70,7 +70,7 @@ public class HomeController {
 	}
 	  private final UserService userService;
 
-	    public HomeController(UserService userService) { // constructor injection, no @Autowired
+	    public HomeController(UserService userService) { 
 	        this.userService = userService;
 	    }
 
