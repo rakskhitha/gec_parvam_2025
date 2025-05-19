@@ -12,11 +12,20 @@ import com.Event.Management.System.demo.dto.UserDTO;
 import com.Event.Management.System.demo.model.User;
 import com.Event.Management.System.demo.service.UserService;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Controller
 public class HomeController {
 
 	@GetMapping({"", "/" ,"index"})
-	public String home() {
+	
+	public String home(HttpServletRequest request, Model model) {
+	    	String login_success_msg = (String) request.getSession().getAttribute("login_success");
+	    	if(login_success_msg != null) {
+	    		model.addAttribute("success",login_success_msg);
+	    		request.getSession().removeAttribute("login_success");
+	    	}
+		
 		return "index";
 	}
 	@GetMapping("/blog")
@@ -84,13 +93,6 @@ public class HomeController {
 	        return "redirect:/login";
 	    }
 
-	    @GetMapping("/admin/admin_dashboard")
-		public String admin_dashboard() {
-			return "/admin/admin_dashboard";
-		}
-	    @GetMapping("/organizer/organizer_dashboard")
-		public String organizer_dashboard() {
-			return "/organizer/organizer_dashboard";
-		}
+	   
 	    
 }

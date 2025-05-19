@@ -14,6 +14,11 @@
 <body>
 
   <!-- Header & Navbar -->
+  <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${success}"> 
+    <span th:text="${success}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
      

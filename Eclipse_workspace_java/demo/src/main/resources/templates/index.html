@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home Page</title>
+ 
 </head>
 
 <body>
   <section >
 
   <!-- hero section -->
+  <div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${success}"> 
+    <span th:text="${success}"></span>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+
   <section id="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="4000">
       <div class="carousel-inner">
